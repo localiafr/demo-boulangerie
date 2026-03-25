@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boulangerie Au Pain Doré - Bourges</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; background: #fdf6ec; color: #3a2a1a; }
+
+    header {
+      background: #7a3b1e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 { font-size: 2em; letter-spacing: 2px; }
+    header p { font-size: 1em; margin-top: 8px; opacity: 0.85; }
+
+    nav {
+      background: #5c2a10;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px;
+    }
+    nav a { color: #f5deb3; text-decoration: none; font-size: 0.95em; }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200') center/cover;
+      color: white;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    .hero h2 { font-size: 2em; }
+    .hero p { font-size: 1.1em; margin-top: 10px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: #7a3b1e;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .infos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      flex: 1;
+      min-width: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .card h3 { color: #7a3b1e; margin-bottom: 12px; font-size: 1.1em; }
+    .card p { font-size: 0.95em; line-height: 1.7; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #7a3b1e;
+      color: #f5deb3;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🥖 Au Pain Doré</h1>
+  <p>Boulangerie Artisanale — Bourges</p>
+</header>
+
+<nav>
+  <a href="#">Accueil</a>
+  <a href="#">Nos produits</a>
+  <a href="#">Commandes spéciales</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+  <h2>Le pain comme autrefois</h2>
+  <p>Façonné à la main, cuit au feu de bois, livré chaque matin</p>
+  <a href="#" class="btn">Voir nos spécialités</a>
+</div>
+
+<div class="infos">
+  <div class="card">
+    <h3>🕐 Horaires</h3>
+    <p>Lun – Sam : 6h30 – 19h30<br>Dimanche : 6h30 – 13h00<br>Fermé le mardi</p>
+  </div>
+  <div class="card">
+    <h3>📍 Nous trouver</h3>
+    <p>5 rue du Commerce<br>18000 Bourges<br>02 48 XX XX XX</p>
+  </div>
+  <div class="card">
+    <h3>🎂 Commandes spéciales</h3>
+    <p>Pièces montées, gâteaux<br>sur mesure — 48h à l'avance<br>Demandez à notre assistant !</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 Au Pain Doré — Boulangerie Artisanale de Bourges
+</footer>
+
+<!-- WIDGET FLOWISE — remplace les valeurs ci-dessous -->
+<script type="module">
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+  Chatbot.init({
+    chatflowid: "9c80879b-64aa-4a4a-98c7-5e001db43425",
+    apiHost: "https://flowise-production-9a037.up.railway.app",
+    theme: {
+      button: { backgroundColor: "#7a3b1e" },
+      chatWindow: {
+        welcomeMessage: "Bonjour ! 👋 Bienvenue à la boulangerie Au Pain Doré. Comment puis-je vous aider ?",
+        backgroundColor: "#fdf6ec",
+        title: "Au Pain Doré",
+        titleAvatarSrc: "https://cdn-icons-png.flaticon.com/512/992/992752.png",
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
+```
+
+---
+
+### Étape 4 — Récupère ton Chatflow ID dans Flowise
+
+- Dans Flowise → ton chatflow boulangerie
+- Clique sur le bouton **"Embed"** en haut à droite
+- Copie le `chatflowid` et ton URL Railway
+- Remplace dans le HTML les 2 lignes :
+```
+COLLE-TON-CHATFLOW-ID-ICI
+COLLE-TON-URL-RAILWAY-ICI
+```
+
+---
+
+### Étape 5 — Active GitHub Pages
+- Dans ton repo → **Settings** → **Pages**
+- Source : **"Deploy from branch"**
+- Branch : **main** → dossier **/ (root)**
+- Clique **Save**
+
+Ton site sera en ligne en 2 min à l'adresse :
+```
+https://tonpseudo.github.io/demo-boulangerie
